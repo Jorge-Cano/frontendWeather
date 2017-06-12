@@ -56,7 +56,7 @@ $(function(){
 // this is platypus:
 
     var getWeather = $.ajax({
-      url: 'http://localhost:5500/city/',
+      url: 'https://morning-reef-57754.herokuapp.com/city',
       method: "POST",
       data: {
         city: city
