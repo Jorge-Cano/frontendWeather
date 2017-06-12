@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Single Page App</title>
+
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ -->    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/flag-icon-css/css/flag-icon.min.css">
+  </head>
+  <body>
+    <div id="#iframe"><iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBu5dojGoZVfnOEZdnM_9iBZo-OuB12pNg
+    &q=Downtown,Austin+TX" allowfullscreen>
+
+</iframe></div>
+    <main class="weather-app container">
+
+      <div class="row form-row">
+        <div class="col-md-4 col-md-offset-4">
+          <h1 class="title">Weather App</h1>
+          <form class="getWeatherData">
+            <input type="text" class="weather-city" placeholder="Enter a city.."/>
+            <input type="submit" value="Get Weather">
+            <p class="city-error" style="display:none;">Whoops! Looks like that city doesn't exist, try another one.</p>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 results">
+
+          <h2 class="results-city"></h2>
+
+
+          <div class="temperature-container">
+            <span class="temperature-label"><strong>Temperature: </strong></span>
+            <span class="temperature"></span>
+          </div>
+
+          <div class="humidity-container">
+            <span class="humidity-label"><strong>Humidity: </strong></span>
+            <span class="humidity"></span>
+          </div>
+
+          <div class="description-container">
+            <span class="description-label"></span>
+            <span class="description"></span>
+          </div>
+
+          <div id="openweathermap-widget-11"></div>
+          <script src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '4671654',appid: 'db6568c511bca3eb8d1b0dc6e1ea35ca',units: 'imperial',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      Thanks for viewing!
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
